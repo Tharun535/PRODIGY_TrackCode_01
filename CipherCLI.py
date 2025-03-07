@@ -30,17 +30,17 @@ def get_valid_string(prompt):
 
 
 def main():
-    print(Fore.CYAN + "\n📜 Welcome to the Caesar Cipher CLI Tool! 🔐")
+    print(Fore.CYAN + "\n Welcome to the Caesar Cipher CLI Tool! ")
     print(Fore.YELLOW + "--------------------------------------------")
 
     print(Fore.GREEN + "\nChoose an option:")
-    print(Fore.MAGENTA + "🔹 'e' - Encrypt a message")
-    print(Fore.MAGENTA + "🔹 'd' - Decrypt a message\n")
+    print(Fore.MAGENTA + "🔹 '1' - Encrypt a message")
+    print(Fore.MAGENTA + "🔹 '2' - Decrypt a message\n")
 
-    mode = input(Fore.CYAN + "Enter your choice (e/d): ").strip().lower()
+    mode = input(Fore.CYAN + "Enter your choice (1/2): ").strip().lower()
 
-    if mode not in ['e', 'd']:
-        print(Fore.RED + "❌ Invalid choice! Please enter 'e' for encryption or 'd' for decryption.")
+    if mode not in ['1', '2']:
+        print(Fore.RED + "❌ Invalid choice! Please enter '1' for encryption or '2' for decryption.")
         return
 
     print(Fore.YELLOW + "\n🔠 Example message: Hello, World!")
@@ -61,7 +61,7 @@ def main():
     output = caesar_cipher(text, shift, mode)
 
     print(Fore.GREEN + f"\n✅ Result: {Fore.YELLOW}{output}")
-    print(Fore.BLUE + "\n✨ Thanks for using the Caesar Cipher CLI! ✨")
+    print(Fore.BLUE + "\n Thanks for using the Caesar Cipher CLI! ")
 
 
 if __name__ == "__main__":
