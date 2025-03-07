@@ -43,8 +43,8 @@ def main():
         print(Fore.RED + "❌ Invalid choice! Please enter '1' for encryption or '2' for decryption.")
         return
 
-    print(Fore.YELLOW + "\n🔠 Example message: Hello, World!")
-    print(Fore.YELLOW + "🔢 Example shift: 3 (A → D, B → E, etc.)\n")
+    print(Fore.YELLOW + "\n Example message: Hello, World!")
+    print(Fore.YELLOW + " Example shift: 3 (A → D, B → E, etc.)\n")
 
     text = get_valid_string("Enter your message: ")
 
@@ -60,7 +60,7 @@ def main():
 
     output = caesar_cipher(text, shift, mode)
 
-    print(Fore.GREEN + f"\n✅ Result: {Fore.YELLOW}{output}")
+    print(Fore.GREEN + f"\n Result: {Fore.YELLOW}{output}")
     print(Fore.BLUE + "\n Thanks for using the Caesar Cipher CLI! ")
 
 
