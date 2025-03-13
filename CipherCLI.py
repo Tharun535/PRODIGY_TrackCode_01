@@ -34,18 +34,16 @@ def main():
     print(Fore.YELLOW + "--------------------------------------------")
 
     print(Fore.GREEN + "\nChoose an option:")
-    print(Fore.MAGENTA + "🔹 '1' - Encrypt a message")
-    print(Fore.MAGENTA + "🔹 '2' - Decrypt a message\n")
+    print(Fore.MAGENTA + "🔹 'e' - Encrypt a message")
+    print(Fore.MAGENTA + "🔹 'd' - Decrypt a message\n")
 
-    mode = input(Fore.CYAN + "Enter your choice (1/2): ").strip().lower()
+    mode = input(Fore.CYAN + "Enter your choice (e/d): ").strip().lower()
 
-    if mode not in ['1', '2']:
-        print(Fore.RED + "❌ Invalid choice! Please enter '1' for encryption or '2' for decryption.")
+    if mode not in ['e', 'd']:
+        print(Fore.RED + "❌ Invalid choice! Please enter 'e' for encryption or 'd' for decryption.")
         return
 
-    print(Fore.YELLOW + "\n Example message: Hello, World!")
-    print(Fore.YELLOW + " Example shift: 3 (A → D, B → E, etc.)\n")
-
+   
     text = get_valid_string("Enter your message: ")
 
     while True:
@@ -60,8 +58,8 @@ def main():
 
     output = caesar_cipher(text, shift, mode)
 
-    print(Fore.GREEN + f"\n Result: {Fore.YELLOW}{output}")
-    print(Fore.BLUE + "\n Thanks for using the Caesar Cipher CLI! ")
+    print(Fore.GREEN + f"\n✅ Result: {Fore.YELLOW}{output}")
+    print(Fore.BLUE + "\n✨ Thanks for using the Caesar Cipher CLI! ✨")
 
 
 if __name__ == "__main__":
